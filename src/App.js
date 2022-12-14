@@ -1,24 +1,75 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import {
+  Accordion,
+  Card,
+  Grid,
+  Pagination,
+  TextStyles,
+} from "@cedcommerce/ounce-ui";
 
 function App() {
+
+  var x = 5;
+  var x = 12;
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Grid
+        columns={[
+          {
+            dataIndex: "name",
+            render: function noRefCheck() {},
+            title: "Name",
+            width: "20%",
+          },
+          {
+            dataIndex: "gender",
+            title: "Gender",
+            width: "20%",
+          },
+          {
+            dataIndex: "email",
+            title: "Email",
+          },
+        ]}
+        // loading
+        onChange={function noRefCheck() {}}
+        rowKey={function noRefCheck() {}}
+      />
+      <Pagination
+        countPerPage={10}
+        currentPage={1}
+        onCountChange={function noRefCheck() {}}
+        onEnter={function noRefCheck() {}}
+        onNext={function noRefCheck() {}}
+        onPrevious={function noRefCheck() {}}
+        optionPerPage={[
+          {
+            label: "10",
+            value: "10",
+          },
+          {
+            label: "15",
+            value: "15",
+          },
+          {
+            label: "20",
+            value: "20",
+          },
+          {
+            label: "25",
+            value: "25",
+          },
+          {
+            label: "50",
+            value: "50",
+          },
+        ]}
+        totalitem={200}
+      />
+    </>
   );
 }
 
